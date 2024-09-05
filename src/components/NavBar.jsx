@@ -1,12 +1,10 @@
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../assets/logo.jpeg";
 import { LINKS } from "../constants";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -25,54 +23,16 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      // If scrolling down, partially hide the navbar
-      setIsNavbarVisible(false);
-    } else {
-      // If scrolling up, fully show the navbar
-      setIsNavbarVisible(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
-
-  const handleMouseEnter = () => {
-    // Show navbar when hovering over the area
-    setIsNavbarVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    // Partially hide the navbar when not hovering and still scrolling down
-    if (window.scrollY > lastScrollY) {
-      setIsNavbarVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
-
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="fixed top-0 w-full z-50 flex flex-col items-center justify-center mt-4"
-    >
-      <nav
-        className={`w-full transition-transform duration-300 ${
-          isNavbarVisible ? "translate-y-0" : "translate-y-[-90%]"
-        }`}
-      >
-        <div className="w-full max-w-[50rem] mx-auto bg-transparent backdrop-blur-md p-4 rounded-full shadow-lg">
+    <div className="fixed bottom-0 left-0 right-0 w-[400px] z-50 mx-auto flex flex-col items-center justify-center mb-4">
+      <nav className="w-full transition-transform duration-300">
+        <div className="w-full mx-auto bg-black backdrop-blur-3xl p-4 rounded-full shadow-sm">
           <div className="flex items-center justify-between">
             <img
               src={logo}
               alt="logo"
-              width={60}
-              height={15}
+              width={40} // Adjusted logo width
+              height={10} // Adjusted logo height
               className="ml-4 rounded-full"
             />
             <div className="hidden space-x-6 lg:flex">
@@ -80,7 +40,8 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={`#${link.targetId}`}
-                  className={`text-base text-white ${
+                  className={`text-sm text-white ${
+                    // Smaller font size
                     index !== 0 ? "border-l-2 border-white pl-2" : ""
                   } hover:opacity-80`}
                   onClick={(e) => handleScroll(e, link.targetId)}
