@@ -23,13 +23,14 @@ const App = () => {
           <Cyl />
           <EffectComposer>
             <Bloom
-              intensity={30}
+              intensity={13}
               luminanceThreshold={0}
-              luminanceSmoothing={0.7}
+              luminanceSmoothing={0.1}
+              height={500}
             />
           </EffectComposer>
         </Canvas>
-        <div style={{ position: "absolute", bottom: 80, width: "100%" }}>
+        <div style={{ position: "absolute", bottom: 150, width: "100%" }}>
           <InfiniteScrollText />
         </div>
         <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center w-full">

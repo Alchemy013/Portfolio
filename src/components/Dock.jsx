@@ -9,7 +9,6 @@ import {
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  IconSend,
   IconFiles,
   IconUserCircle,
   IconHome,
