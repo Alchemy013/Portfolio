@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: rgb(12, 12, 12);
+    background-color: black;
     color: white;
     min-height: 100vh;
     margin: 0;
@@ -20,7 +20,7 @@ body {
   position: relative;
   opacity: 70%;
   overflow: hidden;
-  background-color: #9333ea;
+  background-color: black;
   border-radius: 10px;
   mask-image: linear-gradient(
     to right,
@@ -48,7 +48,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: xx-large;
   font-weight: bold;
-  color: black;
+  color: white;
   text-align: center;
   width: 10px;
   height: 50px;
