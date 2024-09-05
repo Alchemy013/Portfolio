@@ -6,6 +6,7 @@ import { Bloom } from "@react-three/postprocessing";
 import { EffectComposer } from "@react-three/postprocessing";
 import Hero from "./components/Hero";
 import Navbar from "./components/NavBar";
+import InfiniteScrollText from "./components/InfiniteScrollText";
 
 const App = () => {
   return (
@@ -24,12 +25,15 @@ const App = () => {
           <Cyl />
           <EffectComposer>
             <Bloom
-              intensity={20}
+              intensity={30}
               luminanceThreshold={0}
               luminanceSmoothing={0.7}
             />
           </EffectComposer>
         </Canvas>
+        <div style={{ position: "absolute", bottom: 80, width: "100%" }}>
+          <InfiniteScrollText />
+        </div>
       </div>
     </>
   );
