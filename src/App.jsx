@@ -32,7 +32,7 @@ const App = () => {
         <div style={{ position: "absolute", bottom: 80, width: "100%" }}>
           <InfiniteScrollText />
         </div>
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center w-full">
+        <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center w-full">
           <FloatingDock />
         </div>
       </div>

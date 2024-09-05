@@ -6,8 +6,16 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { FaHome, FaInfoCircle, FaProjectDiagram } from "react-icons/fa";
-
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconSend,
+  IconFiles,
+  IconUserCircle,
+  IconHome,
+  IconMail,
+  IconTerminal2,
+} from "@tabler/icons-react";
 export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   return (
     <>
@@ -51,7 +59,7 @@ const FloatingDockMobile = ({ items, className }) => {
         onClick={() => setOpen(!open)}
         className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
       >
-        <FaHome className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconHome className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );
@@ -143,11 +151,14 @@ function IconContainer({ mouseX, title, icon }) {
   );
 }
 
-// Example of usage with items
 const items = [
-  { title: "Home", icon: <FaHome /> },
-  { title: "About", icon: <FaInfoCircle /> },
-  { title: "Projects", icon: <FaProjectDiagram /> },
+  { title: "Home", icon: <IconHome /> },
+  { title: "About", icon: <IconUserCircle /> },
+  { title: "Projects", icon: <IconTerminal2 /> },
+  { title: "Contact ", icon: <IconMail /> },
+  { title: "Resume", icon: <IconFiles /> },
+  { title: "GitHub ", icon: <IconBrandGithub /> },
+  { title: "Linkdin ", icon: <IconBrandLinkedin /> },
 ];
 
 export default function App() {

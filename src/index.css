@@ -2,18 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    background-color: black;
-    color: white;
-    min-height: 100vh;
-    margin: 0;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+}
 
-  }
-
-  
 .wrapper {
-  
   margin-top: 1rem;
   margin-inline: auto;
   height: 50px;
