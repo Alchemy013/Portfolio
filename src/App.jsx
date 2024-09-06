@@ -1,43 +1,33 @@
 import React from "react";
-import Cyl from "./components/cyl";
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Bloom } from "@react-three/postprocessing";
-import { EffectComposer } from "@react-three/postprocessing";
-import Hero from "./components/Hero";
-import InfiniteScrollText from "./components/InfiniteScrollText";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./MainScreens/Home";
+import Projects from "./MainScreens/Projects";
+import About from "./MainScreens/About";
+import NoPage from "./MainScreens/NoPage";
+import Contact from "./MainScreens/Contact";
+import Resume from "./MainScreens/Resume";
 import FloatingDock from "./components/Dock";
 
 const App = () => {
   return (
-    <>
-      <div style={{ height: "100vh", position: "relative" }}>
-        <Canvas
-          flat
-          camera={{ position: [0, 0, 20] }}
-          style={{ display: "block" }}
-        >
-          <OrbitControls enableZoom={false} />
-
-          <ambientLight />
-          <Cyl />
-          <EffectComposer>
-            <Bloom
-              intensity={13}
-              luminanceThreshold={0}
-              luminanceSmoothing={0.1}
-              height={500}
-            />
-          </EffectComposer>
-        </Canvas>
-        <div style={{ position: "absolute", bottom: 150, width: "100%" }}>
-          <InfiniteScrollText />
+    <BrowserRouter>
+      <div className="relative min-h-screen flex flex-col">
+        <div className="flex-grow">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Resume" element={<Resume />} />
+            <Route path="*" element={<NoPage />} />
+          </Routes>
         </div>
-        <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center w-full">
+        <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
           <FloatingDock />
         </div>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   AnimatePresence,
   motion,
@@ -15,6 +16,7 @@ import {
   IconMail,
   IconTerminal2,
 } from "@tabler/icons-react";
+
 export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   return (
     <>
@@ -46,9 +48,11 @@ const FloatingDockMobile = ({ items, className }) => {
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <button className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
-                  <div className="h-4 w-4">{item.icon}</div>
-                </button>
+                <Link to={item.link}>
+                  <button className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
+                    <div className="h-4 w-4">{item.icon}</div>
+                  </button>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
@@ -73,7 +77,9 @@ const FloatingDockDesktop = ({ items, className }) => {
       className={`mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3 ${className}`}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <Link key={item.title} to={item.link}>
+          <IconContainer mouseX={mouseX} title={item.title} icon={item.icon} />
+        </Link>
       ))}
     </motion.div>
   );
@@ -151,13 +157,13 @@ function IconContainer({ mouseX, title, icon }) {
 }
 
 const items = [
-  { title: "Home", icon: <IconHome /> },
-  { title: "About", icon: <IconUserCircle /> },
-  { title: "Projects", icon: <IconTerminal2 /> },
-  { title: "Contact ", icon: <IconMail /> },
-  { title: "Resume", icon: <IconFiles /> },
-  { title: "GitHub ", icon: <IconBrandGithub /> },
-  { title: "Linkdin ", icon: <IconBrandLinkedin /> },
+  { title: "Home", icon: <IconHome />, link: "/Home" },
+  { title: "About", icon: <IconUserCircle />, link: "/About" },
+  { title: "Projects", icon: <IconTerminal2 />, link: "/Projects" },
+  { title: "Contact", icon: <IconMail />, link: "/Contact" },
+  { title: "Resume", icon: <IconFiles />, link: "/Resume" },
+  { title: "GitHub", icon: <IconBrandGithub />, link: "/GitHub" },
+  { title: "LinkedIn", icon: <IconBrandLinkedin />, link: "/LinkedIn" },
 ];
 
 export default function App() {
