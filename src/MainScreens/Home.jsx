@@ -1,5 +1,5 @@
 import React from "react";
-import Cyl from "../components/cyl";
+import Cyl from "../components/Cyl";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Bloom } from "@react-three/postprocessing";
