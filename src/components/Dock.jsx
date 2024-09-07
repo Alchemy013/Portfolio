@@ -48,11 +48,19 @@ const FloatingDockMobile = ({ items, className }) => {
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <Link to={item.link}>
-                  <button className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
-                    <div className="h-4 w-4">{item.icon}</div>
-                  </button>
-                </Link>
+                {item.external ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <button className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
+                      <div className="h-4 w-4">{item.icon}</div>
+                    </button>
+                  </a>
+                ) : (
+                  <Link to={item.link}>
+                    <button className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
+                      <div className="h-4 w-4">{item.icon}</div>
+                    </button>
+                  </Link>
+                )}
               </motion.div>
             ))}
           </motion.div>
@@ -76,11 +84,30 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseLeave={() => mouseX.set(Infinity)}
       className={`mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3 ${className}`}
     >
-      {items.map((item) => (
-        <Link key={item.title} to={item.link}>
-          <IconContainer mouseX={mouseX} title={item.title} icon={item.icon} />
-        </Link>
-      ))}
+      {items.map((item) =>
+        item.external ? (
+          <a
+            key={item.title}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconContainer
+              mouseX={mouseX}
+              title={item.title}
+              icon={item.icon}
+            />
+          </a>
+        ) : (
+          <Link key={item.title} to={item.link}>
+            <IconContainer
+              mouseX={mouseX}
+              title={item.title}
+              icon={item.icon}
+            />
+          </Link>
+        )
+      )}
     </motion.div>
   );
 };
@@ -163,7 +190,12 @@ const items = [
   { title: "Contact", icon: <IconMail />, link: "/Contact" },
   { title: "Resume", icon: <IconFiles />, link: "/Resume" },
   { title: "Experience", icon: <IconCrown />, link: "/Experience" },
-  { title: "Github", icon: <IconBrandGithub />, link: "/Github" },
+  {
+    title: "Github",
+    icon: <IconBrandGithub />,
+    link: "https://github.com/Alchemy013",
+    external: true, // Indicate this link is external
+  },
 ];
 
 export default function App() {
