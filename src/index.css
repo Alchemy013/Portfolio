@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  margin-top: 1rem;
+  margin-inline: auto;
+  height: 120px; /* Increase height to accommodate larger text */
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.itemLeft {
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  font-size: 5rem; /* Adjust to make the text very large */
+  font-weight: 700; /* Bold weight */
+  color: white;
+  text-align: center;
+  text-transform: uppercase; /* Make text all caps */
+  white-space: nowrap; /* Prevent line breaks */
+  position: absolute;
+  width: 200%; /* Ensure enough space for continuous scrolling */
+  animation: scrollLeft 20s linear infinite; /* Adjust duration for desired speed */
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
