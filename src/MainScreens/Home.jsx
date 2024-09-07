@@ -5,8 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import { Bloom } from "@react-three/postprocessing";
 import { EffectComposer } from "@react-three/postprocessing";
 import InfiniteScrollText from "../components/InfiniteScrollText";
-import FloatingDock from "../components/Dock";
-
 const Home = () => {
   return (
     <>

@@ -1,8 +1,12 @@
 import React from "react";
-import FloatingDock from "../components/Dock";
+import Bento from "../components/Bento";
 
 const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <div className="left-96">
+      <Bento />
+    </div>
+  );
 };
 
 export default Projects;

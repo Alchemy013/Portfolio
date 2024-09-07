@@ -40,3 +40,7 @@ body {
   width: 200%; /* Ensure enough space for continuous scrolling */
   animation: scrollLeft 20s linear infinite; /* Adjust duration for desired speed */
 }
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
