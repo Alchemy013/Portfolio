@@ -1,10 +1,10 @@
 import React from "react";
-import Bento from "../components/Bento";
+import { HeroParallaxDemo } from "../components/HeroParallaxDemo";
 
 const Projects = () => {
   return (
-    <div className="left-96">
-      <Bento />
+    <div>
+      <HeroParallaxDemo />
     </div>
   );
 };

@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import {
   IconBrandGithub,
-  IconBrandLinkedin,
+  IconCrown,
   IconFiles,
   IconUserCircle,
   IconHome,
@@ -162,8 +162,8 @@ const items = [
   { title: "Projects", icon: <IconTerminal2 />, link: "/Projects" },
   { title: "Contact", icon: <IconMail />, link: "/Contact" },
   { title: "Resume", icon: <IconFiles />, link: "/Resume" },
-  { title: "GitHub", icon: <IconBrandGithub />, link: "/GitHub" },
-  { title: "LinkedIn", icon: <IconBrandLinkedin />, link: "/LinkedIn" },
+  { title: "Experience", icon: <IconCrown />, link: "/Experience" },
+  { title: "Github", icon: <IconBrandGithub />, link: "/Github" },
 ];
 
 export default function App() {

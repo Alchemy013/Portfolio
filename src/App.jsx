@@ -5,8 +5,9 @@ import Projects from "./MainScreens/Projects";
 import About from "./MainScreens/About";
 import NoPage from "./MainScreens/NoPage";
 import Contact from "./MainScreens/Contact";
-import Resume from "./MainScreens/Resume";
+import Experience from "./MainScreens/Experience";
 import FloatingDock from "./components/Dock";
+import Resume from "./MainScreens/Resume";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Resume" element={<Resume />} />
+            <Route path="/Experience" element={<Experience />} />
+
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
