@@ -194,7 +194,7 @@ const items = [
     title: "Github",
     icon: <IconBrandGithub />,
     link: "https://github.com/Alchemy013",
-    external: true, // Indicate this link is external
+    external: true,
   },
 ];
 

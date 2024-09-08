@@ -35,8 +35,7 @@ export const HeroParallax = ({ products }) => {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 1], [-200, 200]), // Adjusted range for smooth scrolling
-    springConfig
+    useTransform(scrollYProgress, [0, 1], [-200, 200])
   );
 
   return (
@@ -114,7 +113,11 @@ export const ProductCard = ({ product, translate }) => {
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <a href={product.link} className="block group-hover/product:shadow-2xl">
+      <a
+        href={product.link}
+        target="_blank"
+        className="block group-hover/product:shadow-2xl"
+      >
         <img
           src={product.thumbnail}
           alt={product.title}

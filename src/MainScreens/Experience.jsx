@@ -2,11 +2,7 @@ import React from "react";
 import { TimelineDemo } from "../components/TimelineDemo";
 
 const Experience = () => {
-  return (
-    <div>
-      <TimelineDemo />
-    </div>
-  );
+  return <div>Heavy Experience </div>;
 };
 
 export default Experience;
