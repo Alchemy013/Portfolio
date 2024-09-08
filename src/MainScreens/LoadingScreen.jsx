@@ -1,7 +1,12 @@
 import React from "react";
+import { MultiStepLoaderDemo } from "../components/LoadingStates";
 
 const LoadingScreen = () => {
-  return <div className="absolute bg-black z-1000">LoadingScreen</div>;
+  return (
+    <div>
+      <MultiStepLoaderDemo />
+    </div>
+  );
 };
 
 export default LoadingScreen;

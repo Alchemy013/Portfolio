@@ -19,7 +19,7 @@ const AppContent = () => {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location]);
@@ -52,7 +52,6 @@ const AppContent = () => {
   );
 };
 
-// Main App component
 const App = () => {
   return (
     <BrowserRouter>
