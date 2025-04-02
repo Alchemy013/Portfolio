@@ -10,22 +10,22 @@ export const products = [
   {
     title: "Project 1",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./IG.png",
   },
   {
     title: "Project 2",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./genai.png",
   },
   {
     title: "Project 3",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./HAND.png",
   },
   {
     title: "Project 4",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./men.png",
   },
   {
     title: "Project 5",
@@ -36,17 +36,17 @@ export const products = [
   {
     title: "Project 6",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./IG.png",
   },
   {
     title: "Project 7",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./MAIL.png",
   },
   {
     title: "Project 8",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./cancer.png",
   },
   {
     title: "Project 9",
@@ -56,31 +56,31 @@ export const products = [
   {
     title: "Project 10",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./Tb.png",
   },
   {
     title: "Project 11",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./MAIL.png",
   },
   {
     title: "Project 12",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./ROCK.png",
   },
   {
-    title: "Project 13",
+    title: "Project 2",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./genai.png",
   },
   {
     title: "Project 14",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./Tb.png",
   },
   {
     title: "Project 15",
     link: "https://github.com/Alchemy013",
-    thumbnail: "./BohtSaareProject.png",
+    thumbnail: "./men.png",
   },
 ];

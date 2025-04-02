@@ -3,7 +3,7 @@ import { HeroParallaxDemo } from "../components/HeroParallaxDemo";
 
 const Projects = () => {
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <HeroParallaxDemo />
     </div>
   );
